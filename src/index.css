@@ -3,17 +3,18 @@
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --color-stone-950: #0c0a09;
-  --color-stone-900: #1c1917;
-  --color-stone-800: #292524;
-  --color-stone-700: #44403c;
-  --color-stone-500: #78716c;
-  --color-stone-400: #a8a29e;
-  --color-stone-300: #d6d3d1;
-  --color-stone-200: #e7e5e4;
-  --color-stone-100: #f5f5f4;
-  --color-amber-400: #fbbf24;
-  --color-amber-500: #f59e0b;
+  --color-warm-50: #fafaf9;
+  --color-warm-100: #f5f5f4;
+  --color-warm-200: #e7e5e4;
+  --color-warm-300: #d6d3d1;
+  --color-warm-400: #a8a29e;
+  --color-warm-500: #78716c;
+  --color-warm-600: #57534e;
+  --color-warm-700: #44403c;
+  --color-warm-800: #292524;
+  --color-warm-900: #1c1917;
+  --color-accent: #2563eb;
+  --color-accent-light: #3b82f6;
 }
 
 html {
@@ -22,14 +23,14 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-stone-950);
-  color: var(--color-stone-300);
+  background-color: var(--color-warm-50);
+  color: var(--color-warm-700);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: var(--color-amber-500);
-  color: var(--color-stone-950);
+  background-color: var(--color-accent);
+  color: white;
 }

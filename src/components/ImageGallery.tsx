@@ -11,7 +11,7 @@ export function ImageGallery({ images, columns = 2 }: ImageGalleryProps) {
 
   return (
     <>
-      <div className={`grid grid-cols-1 ${columns === 3 ? 'sm:grid-cols-2 lg:grid-cols-3' : 'sm:grid-cols-2'} gap-4`}>
+      <div className={`grid grid-cols-1 ${columns === 3 ? 'sm:grid-cols-2 lg:grid-cols-3' : 'sm:grid-cols-2'} gap-3`}>
         {images.map((img, i) => (
           <motion.button
             key={i}
@@ -26,8 +26,8 @@ export function ImageGallery({ images, columns = 2 }: ImageGalleryProps) {
               loading="lazy"
             />
             {img.caption && (
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-sm text-stone-200">{img.caption}</p>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="text-xs text-white">{img.caption}</p>
               </div>
             )}
           </motion.button>
@@ -41,7 +41,7 @@ export function ImageGallery({ images, columns = 2 }: ImageGalleryProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelected(null)}
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-6 cursor-pointer"
+            className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-6 cursor-pointer"
           >
             <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
@@ -52,7 +52,7 @@ export function ImageGallery({ images, columns = 2 }: ImageGalleryProps) {
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
             />
             {images[selected].caption && (
-              <p className="absolute bottom-8 text-sm text-stone-400 font-mono">
+              <p className="absolute bottom-6 text-sm text-white/70 font-mono">
                 {images[selected].caption}
               </p>
             )}
