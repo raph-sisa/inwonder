@@ -34,7 +34,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'analog-network',
     title: 'The Analog Network',
-    byline: 'Adopting new tools to build an immersive city experience',
+    byline: '100+ strangers went phone-free to explore a speculative city — shipped in 48 hours',
     tags: ['New Tool Adoption', 'Creative Constraints', 'Physical Product'],
     thumbnail: '/images/analog-network/event/carriers-with-rings.jpg',
     available: true,
