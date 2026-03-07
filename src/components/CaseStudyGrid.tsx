@@ -58,9 +58,9 @@ export function CaseStudyGrid({ studies, onSelect }: Props) {
               <p className="text-sm text-warm-500 leading-relaxed">
                 {study.byline}
               </p>
-              {!study.available && (
+              {study.passwordProtected && (
                 <p className="text-xs font-mono text-warm-400 mt-3">
-                  Coming soon
+                  &#x1F512; Password protected
                 </p>
               )}
             </div>

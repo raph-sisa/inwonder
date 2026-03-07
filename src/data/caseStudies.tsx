@@ -9,6 +9,7 @@ export interface CaseStudy {
   tags: string[]
   thumbnail: string
   available: boolean
+  passwordProtected?: boolean
   content: React.ComponentType
 }
 
@@ -19,7 +20,8 @@ export const caseStudies: CaseStudy[] = [
     byline: 'Designing enterprise tools for $1B+ in touring revenue',
     tags: ['Enterprise Product', 'Complex Systems', 'Change Management'],
     thumbnail: '/images/analog-network/process/depth-map.png',
-    available: false,
+    available: true,
+    passwordProtected: true,
     content: AEGContent,
   },
   {
@@ -28,7 +30,8 @@ export const caseStudies: CaseStudy[] = [
     byline: 'Building an AI-powered acquisition engine from zero',
     tags: ['AI/ML', 'End-to-End Delivery', 'Startup Execution'],
     thumbnail: '/images/analog-network/process/comfyui-map-01.png',
-    available: false,
+    available: true,
+    passwordProtected: true,
     content: BumoContent,
   },
   {
