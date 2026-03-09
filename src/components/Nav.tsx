@@ -5,7 +5,7 @@ export function Nav() {
   const isHome = pathname === '/'
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-warm-50/80 backdrop-blur-md border-b border-warm-200/40">
+    <nav className="bg-warm-50/80 backdrop-blur-md border-b border-warm-200/40">
       <div className="max-w-6xl mx-auto px-6 sm:px-12 h-14 flex items-center justify-between">
         <Link
           to="/"

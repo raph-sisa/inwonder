@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Lenis from 'lenis'
 import { Nav } from './components/Nav'
+import { AnnouncementBar } from './components/AnnouncementBar'
 import { Home } from './pages/Home'
 import { CaseStudyPage } from './pages/CaseStudyPage'
 
@@ -31,8 +32,11 @@ export default function App() {
 
   return (
     <>
-      <Nav />
-      <div className="pt-14">
+      <div className="sticky top-0 z-50">
+        <AnnouncementBar />
+        <Nav />
+      </div>
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work/:id" element={<CaseStudyPage />} />
