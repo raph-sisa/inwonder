@@ -1,6 +1,10 @@
 import { AnalogNetworkContent } from '../components/studies/AnalogNetwork'
 import { AEGContent } from '../components/studies/AEG'
 import { BumoContent } from '../components/studies/Bumo'
+import { AEGIllustration } from '../components/illustrations/AEGIllustration'
+import { BumoIllustration } from '../components/illustrations/BumoIllustration'
+import { AnalogNetworkIllustration } from '../components/illustrations/AnalogNetworkIllustration'
+import { FabricatedIllustration } from '../components/illustrations/FabricatedIllustration'
 
 export interface CaseStudy {
   id: string
@@ -13,6 +17,7 @@ export interface CaseStudy {
   externalUrl?: string
   category: 'work' | 'curiosity'
   content?: React.ComponentType
+  illustration?: React.ComponentType<{ className?: string }>
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -26,6 +31,7 @@ export const caseStudies: CaseStudy[] = [
     passwordProtected: true,
     category: 'work',
     content: AEGContent,
+    illustration: AEGIllustration,
   },
   {
     id: 'bumo',
@@ -37,6 +43,7 @@ export const caseStudies: CaseStudy[] = [
     passwordProtected: true,
     category: 'work',
     content: BumoContent,
+    illustration: BumoIllustration,
   },
   {
     id: 'fabricated',
@@ -47,6 +54,7 @@ export const caseStudies: CaseStudy[] = [
     available: true,
     externalUrl: 'https://fabricated.inwonder.xyz',
     category: 'curiosity',
+    illustration: FabricatedIllustration,
   },
   {
     id: 'analog-network',
@@ -57,5 +65,6 @@ export const caseStudies: CaseStudy[] = [
     available: true,
     category: 'curiosity',
     content: AnalogNetworkContent,
+    illustration: AnalogNetworkIllustration,
   },
 ]

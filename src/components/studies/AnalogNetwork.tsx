@@ -18,8 +18,8 @@ export function AnalogNetworkContent() {
   return (
     <div className="space-y-10">
       {/* What this illustrates */}
-      <div className="bg-warm-50 rounded-lg p-5 border border-warm-200">
-        <p className="font-mono text-xs text-accent mb-2">What this case study illustrates</p>
+      <div className="bg-accent/5 rounded-lg p-5 border-l-4 border-accent">
+        <p className="font-mono text-sm font-semibold text-accent mb-2">What this case study illustrates</p>
         <p className="text-sm text-warm-600 leading-relaxed">
           Rapid adoption of unfamiliar tools (ComfyUI, GIS, 3D printing),
           comfort working in ambiguity, shipping a physical product under

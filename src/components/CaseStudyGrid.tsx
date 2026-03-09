@@ -1,44 +1,39 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { caseStudies } from '../data/caseStudies'
+import { TextReveal, Reveal } from './TextReveal'
 
 const workStudies = caseStudies.filter((s) => s.category === 'work')
 
 export function CaseStudyGrid() {
   return (
     <section id="work" className="px-6 sm:px-12 py-24 max-w-5xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="font-display font-bold text-3xl sm:text-5xl text-warm-900 mb-14 tracking-tight"
+      <Reveal>
+        <p className="font-mono text-sm text-accent mb-3">
+          Case studies &amp; client work
+        </p>
+      </Reveal>
+
+      <TextReveal
+        as="h2"
+        className="font-display font-bold text-5xl sm:text-7xl text-warm-900 mb-14 tracking-tight"
+        accent={['Work']}
+        stagger={0.06}
       >
         Selected Work
-      </motion.h2>
+      </TextReveal>
 
       <div className="space-y-3">
         {workStudies.map((study, i) => (
-          <motion.div
-            key={study.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.08 }}
-          >
+          <Reveal key={study.id} delay={i * 0.08}>
             <Link
               to={`/work/${study.id}`}
               className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 p-5 rounded-xl border border-warm-200/60 bg-white/50 hover:bg-white hover:border-accent/20 hover:shadow-sm transition-all duration-300"
             >
-              {/* Color placeholder */}
-              <div
-                className="w-full sm:w-20 h-20 sm:h-14 rounded-lg shrink-0"
-                style={{
-                  background: study.id === 'aeg'
-                    ? 'linear-gradient(135deg, #2c2420 0%, #433a32 100%)'
-                    : 'linear-gradient(135deg, #c2703e 0%, #d4915f 100%)',
-                }}
-              />
+              {/* Generative illustration */}
+              <div className="w-full sm:w-28 h-20 sm:h-16 rounded-lg shrink-0 overflow-hidden border border-warm-200/40">
+                {study.illustration && <study.illustration className="w-full h-full" />}
+              </div>
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap gap-2 mb-1.5">
                   {study.tags.map((tag) => (
@@ -58,12 +53,16 @@ export function CaseStudyGrid() {
                 </p>
               </div>
               {study.passwordProtected && (
-                <span className="font-mono text-xs text-warm-300 shrink-0 group-hover:text-accent transition-colors">
+                <motion.span
+                  className="font-mono text-xs text-warm-300 shrink-0 group-hover:text-accent transition-colors duration-300"
+                  whileHover={{ x: 2 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                >
                   &#x1F512; Request access
-                </span>
+                </motion.span>
               )}
             </Link>
-          </motion.div>
+          </Reveal>
         ))}
       </div>
     </section>
