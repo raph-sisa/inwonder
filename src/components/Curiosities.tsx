@@ -72,7 +72,7 @@ export function Curiosities() {
                   </div>
                   <h3 className="text-lg font-semibold text-warm-900 mb-1">
                     {item.title}
-                    <span className="inline-block ml-1.5 text-warm-400 text-sm group-hover:text-accent transition-colors">&nearr;</span>
+                    <span className="inline-block ml-1.5 text-warm-400 text-sm group-hover:text-accent transition-colors">&#x2197;</span>
                   </h3>
                   <p className="text-sm text-warm-500 leading-relaxed">
                     {item.byline}
