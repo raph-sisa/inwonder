@@ -2,19 +2,20 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --color-warm-50: #fafaf9;
-  --color-warm-100: #f5f5f4;
-  --color-warm-200: #e7e5e4;
-  --color-warm-300: #d6d3d1;
-  --color-warm-400: #a8a29e;
-  --color-warm-500: #78716c;
-  --color-warm-600: #57534e;
-  --color-warm-700: #44403c;
-  --color-warm-800: #292524;
-  --color-warm-900: #1c1917;
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
+  --color-warm-50: #fdf8f4;
+  --color-warm-100: #f5ede6;
+  --color-warm-200: #e8ddd3;
+  --color-warm-300: #d6c8ba;
+  --color-warm-400: #a89888;
+  --color-warm-500: #7a6e62;
+  --color-warm-600: #5c5147;
+  --color-warm-700: #433a32;
+  --color-warm-800: #2c2420;
+  --color-warm-900: #1a1310;
+  --color-accent: #c2703e;
+  --color-accent-light: #d4915f;
 }
 
 html {
@@ -28,6 +29,19 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }
 
 ::selection {

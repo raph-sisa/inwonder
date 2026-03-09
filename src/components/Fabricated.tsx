@@ -9,10 +9,10 @@ const fadeIn = {
 
 export function Fabricated() {
   return (
-    <section className="px-6 sm:px-12 py-16 max-w-5xl mx-auto border-t border-warm-200">
+    <section className="px-6 sm:px-12 py-24 max-w-5xl mx-auto border-t border-warm-200/60">
       <motion.div {...fadeIn} className="max-w-2xl">
         <p className="font-mono text-sm text-accent mb-3">Coming Soon</p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-warm-900 mb-4">
+        <h2 className="font-display font-bold text-3xl sm:text-5xl text-warm-900 mb-6 tracking-tight">
           Fabricated
         </h2>
         <p className="text-warm-600 leading-relaxed mb-4">

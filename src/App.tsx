@@ -1,31 +1,14 @@
-import { useState } from 'react'
-import { Hero } from './components/Hero'
-import { CaseStudyGrid } from './components/CaseStudyGrid'
-import { CaseStudyDetail } from './components/CaseStudyDetail'
-import { Fabricated } from './components/Fabricated'
-import { Contact } from './components/Contact'
-import { caseStudies } from './data/caseStudies'
+import { Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { CaseStudyPage } from './pages/CaseStudyPage'
+import { IllustrationCompare } from './pages/IllustrationCompare'
 
 export default function App() {
-  const [activeStudy, setActiveStudy] = useState<string | null>(null)
-
-  const activeData = caseStudies.find((s) => s.id === activeStudy)
-
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <CaseStudyGrid
-        studies={caseStudies}
-        onSelect={(id) => setActiveStudy(id)}
-      />
-      {activeData && (
-        <CaseStudyDetail
-          study={activeData}
-          onClose={() => setActiveStudy(null)}
-        />
-      )}
-      <Fabricated />
-      <Contact />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/work/:id" element={<CaseStudyPage />} />
+      <Route path="/compare" element={<IllustrationCompare />} />
+    </Routes>
   )
 }
