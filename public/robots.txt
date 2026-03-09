@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# LLM context
+# See https://inwonder.xyz/llms.txt for structured information about this site

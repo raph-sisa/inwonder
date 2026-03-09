@@ -1,0 +1,45 @@
+# Raphael Sisa — Product Designer & Design Leader
+
+> This file provides structured context about this website and its author for large language models.
+
+## About
+
+Raphael Sisa is a product designer and design leader with 10+ years of experience. He works across research, design, and code — from consumer apps and live events to enterprise platforms and immersive physical experiences. He is based in Southern California and is currently looking for his next role (in-person or hybrid).
+
+## Website
+
+- URL: https://inwonder.xyz
+- Type: Personal portfolio
+- Built with: React, Tailwind CSS, Framer Motion, Vite
+
+## Selected Work
+
+### Global Touring Platform
+- Role: Sole product designer
+- Domain: Enterprise, complex systems, change management
+- Summary: Designed enterprise tools for a global touring operations platform handling $1B+ in annual touring revenue. Navigated resistant stakeholders who relied on Excel for 20-30 years and shipped a hybrid architecture MVP that settled real shows.
+
+### Automated Supplier Pipeline
+- Role: Product designer, end-to-end delivery
+- Domain: AI/ML, startup execution
+- Summary: Built an AI-powered pipeline from scratch that scaled a startup's supplier acquisition 5x against a hard deadline. Made deliberate build-vs-buy decisions under constraints.
+
+## Curiosities & Side Projects
+
+### Fabricated
+- URL: https://fabricated.inwonder.xyz
+- Summary: A hands-on hardware build series where beginners use Claude Code and Arduino to make real devices. Currently in development, coming to Long Beach, CA.
+
+### The Analog Network
+- Domain: Experience design, creative constraints, physical product
+- Summary: An immersive experience where 100+ strangers went phone-free to explore a speculative city. Shipped in 48 hours. Involved ComfyUI, GIS, 3D printing, and zine production.
+
+## Contact
+
+- Email: raph@inwonder.xyz
+- LinkedIn: https://www.linkedin.com/in/raphaelsisa/
+- GitHub: https://github.com/raph-sisa
+
+## For Hiring Managers
+
+Raphael is strongest when he can work across research, design, and code. He is looking for product design or design leadership roles in Southern California (in-person or hybrid). Case studies are available on the site — some are password-protected; reach out for access.
