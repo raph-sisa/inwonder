@@ -45,6 +45,41 @@ export function Curiosities() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
+            {item.externalUrl ? (
+              <a
+                href={item.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl overflow-hidden border border-warm-200/80 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 hover:border-accent/20"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-mono px-2.5 py-1 rounded-full bg-warm-100 text-warm-500 transition-colors duration-300 group-hover:bg-accent/10 group-hover:text-accent"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-lg font-semibold text-warm-900 mb-1">
+                    {item.title}
+                    <span className="inline-block ml-1.5 text-warm-400 text-sm group-hover:text-accent transition-colors">&nearr;</span>
+                  </h3>
+                  <p className="text-sm text-warm-500 leading-relaxed">
+                    {item.byline}
+                  </p>
+                </div>
+              </a>
+            ) : (
             <Link
               to={`/work/${item.id}`}
               className="group block rounded-2xl overflow-hidden border border-warm-200/80 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent/5 hover:border-accent/20"
@@ -75,6 +110,7 @@ export function Curiosities() {
                 </p>
               </div>
             </Link>
+            )}
           </motion.div>
         ))}
       </div>

@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0D0D0D"/>
+
+  <!-- Decorative dots -->
+  <circle cx="120" cy="80" r="4" fill="#D4A55A" opacity="0.6"/>
+  <circle cx="680" cy="140" r="3" fill="#5A8A8A" opacity="0.5"/>
+  <circle cx="200" cy="480" r="3" fill="#B87333" opacity="0.5"/>
+
+  <!-- Wordmark -->
+  <text x="400" y="260" text-anchor="middle" font-family="monospace" font-size="72" font-weight="bold" fill="#D4A55A" letter-spacing="12">FABRICATED</text>
+
+  <!-- Terminal prompt line -->
+  <text x="400" y="320" text-anchor="middle" font-family="monospace" font-size="18" fill="#E8E4D8" opacity="0.7">
+    <tspan fill="#5A8A8A">$</tspan> a hands-on build series
+  </text>
+
+  <!-- Subtext -->
+  <text x="400" y="360" text-anchor="middle" font-family="monospace" font-size="13" fill="#6B6B60">Claude Code + Hardware · Long Beach, CA</text>
+
+  <!-- Simple circuit board traces -->
+  <path d="M100 500 H250 V450 H350" stroke="#D4A55A" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <path d="M450 450 H550 V500 H700" stroke="#5A8A8A" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <circle cx="350" cy="450" r="4" fill="#B87333" opacity="0.3"/>
+  <circle cx="450" cy="450" r="4" fill="#D4A55A" opacity="0.3"/>
+</svg>

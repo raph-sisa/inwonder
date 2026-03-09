@@ -26,7 +26,7 @@ export function CaseStudyPage() {
     }
   }, [study?.passwordProtected])
 
-  if (!study) return <Navigate to="/" replace />
+  if (!study || !study.content) return <Navigate to="/" replace />
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()

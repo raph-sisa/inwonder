@@ -10,8 +10,9 @@ export interface CaseStudy {
   thumbnail: string
   available: boolean
   passwordProtected?: boolean
+  externalUrl?: string
   category: 'work' | 'curiosity'
-  content: React.ComponentType
+  content?: React.ComponentType
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -36,6 +37,16 @@ export const caseStudies: CaseStudy[] = [
     passwordProtected: true,
     category: 'work',
     content: BumoContent,
+  },
+  {
+    id: 'fabricated',
+    title: 'Fabricated',
+    byline: 'A hands-on hardware build series where beginners use AI to make real devices',
+    tags: ['Hardware', 'Claude Code', 'Workshop'],
+    thumbnail: '/images/fabricated/thumbnail.svg',
+    available: true,
+    externalUrl: 'https://fabricated.inwonder.xyz',
+    category: 'curiosity',
   },
   {
     id: 'analog-network',

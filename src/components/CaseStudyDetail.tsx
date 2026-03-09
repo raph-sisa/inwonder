@@ -89,7 +89,7 @@ export function CaseStudyDetail({ study, onClose }: Props) {
 
             {/* Content */}
             <div className="px-6 sm:px-10 py-8">
-              {unlocked ? (
+              {unlocked && Content ? (
                 <Content />
               ) : (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
