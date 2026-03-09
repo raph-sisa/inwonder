@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { caseStudies } from '../data/caseStudies'
@@ -43,16 +43,6 @@ export function CaseStudyPage() {
 
   return (
     <main className="min-h-screen">
-      {/* Navigation */}
-      <nav className="px-6 sm:px-12 py-6 max-w-3xl mx-auto">
-        <Link
-          to="/"
-          className="font-mono text-sm text-warm-400 hover:text-accent transition-colors"
-        >
-          &larr; Back
-        </Link>
-      </nav>
-
       {/* Header */}
       <header className="px-6 sm:px-12 max-w-3xl mx-auto mb-10">
         <motion.div

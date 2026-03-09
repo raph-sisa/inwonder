@@ -7,15 +7,6 @@ export function Hero() {
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full">
         {/* Text */}
         <div className="max-w-2xl flex-1">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-mono text-sm text-accent mb-6"
-          >
-            * In Wonder
-          </motion.p>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

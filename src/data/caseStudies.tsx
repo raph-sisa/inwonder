@@ -10,6 +10,7 @@ export interface CaseStudy {
   thumbnail: string
   available: boolean
   passwordProtected?: boolean
+  category: 'work' | 'curiosity'
   content: React.ComponentType
 }
 
@@ -22,6 +23,7 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: '/images/analog-network/process/depth-map.png',
     available: true,
     passwordProtected: true,
+    category: 'work',
     content: AEGContent,
   },
   {
@@ -32,15 +34,17 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: '/images/analog-network/process/comfyui-map-01.png',
     available: true,
     passwordProtected: true,
+    category: 'work',
     content: BumoContent,
   },
   {
     id: 'analog-network',
     title: 'The Analog Network',
     byline: '100+ strangers went phone-free to explore a speculative city — shipped in 48 hours',
-    tags: ['New Tool Adoption', 'Creative Constraints', 'Physical Product'],
+    tags: ['Experience Design', 'Creative Constraints', 'Physical Product'],
     thumbnail: '/images/analog-network/event/participants-rings-zine.jpg',
     available: true,
+    category: 'curiosity',
     content: AnalogNetworkContent,
   },
 ]
