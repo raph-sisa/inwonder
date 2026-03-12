@@ -9,10 +9,10 @@ const MODEL_URL = '/models/memoji.glb'
 const DRACO_URL = 'https://www.gstatic.com/draco/versioned/decoders/1.5.7/'
 
 // Preload the model with Draco decoder
-useGLTF.preload(MODEL_URL, true, true, DRACO_URL)
+useGLTF.preload(MODEL_URL, DRACO_URL)
 
 function Head({ enabled }: { enabled: boolean }) {
-  const { scene } = useGLTF(MODEL_URL, true, true, DRACO_URL)
+  const { scene } = useGLTF(MODEL_URL, DRACO_URL)
   const groupRef = useRef<THREE.Group>(null)
   const currentRotation = useRef({ x: 0, y: 0 })
   const { mouse } = useThree()
