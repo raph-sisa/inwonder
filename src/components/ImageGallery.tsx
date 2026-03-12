@@ -15,6 +15,10 @@ export function ImageGallery({ images, columns = 2 }: ImageGalleryProps) {
         {images.map((img, i) => (
           <motion.button
             key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ scale: 1.02 }}
             onClick={() => setSelected(i)}
             className="relative overflow-hidden rounded-lg aspect-square cursor-pointer group"

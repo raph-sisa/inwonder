@@ -1,68 +1,66 @@
 import { motion } from 'framer-motion'
-import { TextReveal } from './TextReveal'
-
-const EASE_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1]
+import { MemojiHead } from './MemojiHead'
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center px-6 sm:px-12 max-w-6xl mx-auto">
-      <div className="w-full">
-        <div className="max-w-2xl">
-          <TextReveal
-            as="h1"
-            className="font-display font-bold text-7xl sm:text-9xl text-warm-900 leading-[0.95] mb-4 tracking-tight"
-            stagger={0.08}
-            delay={0.1}
-          >
-            Raphael Sisa
-          </TextReveal>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: EASE_OUT }}
-            className="font-mono text-sm text-warm-400 mb-8"
-          >
-            Product Designer &amp; Design Leader — 10+ years
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5, ease: EASE_OUT }}
-            className="text-lg text-warm-500 leading-relaxed mb-12 max-w-xl font-light"
-          >
-            I like making things, and I tend to gather people to learn alongside
-            me. Over the last decade, that curiosity has taken me across design,
-            product, and research — from consumer apps and live events to
-            enterprise platforms and immersive physical experiences.
-          </motion.p>
-
+    <section className="h-[calc(100vh-theme(spacing.14)-theme(spacing.10))] flex flex-col justify-between px-6 sm:px-12 max-w-6xl mx-auto">
+      {/* Main content — vertically centered, two columns */}
+      <div className="flex-1 flex items-center">
+        <div className="flex items-center justify-between w-full gap-12">
+          {/* Left — text */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6, ease: EASE_OUT }}
-            className="flex gap-8 text-sm font-mono"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-2xl"
           >
-            <motion.a
-              href="#work"
-              className="text-warm-400 hover:text-accent transition-colors duration-300"
-              whileHover={{ x: 4 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            >
-              See work &#x2193;
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="text-warm-400 hover:text-accent transition-colors duration-300"
-              whileHover={{ x: 4 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            >
-              Get in touch
-            </motion.a>
+            <h1 className="font-display font-bold text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.08] tracking-tight text-warm-900 mb-6">
+              Raphael Sisa
+            </h1>
+            <p className="font-display text-[clamp(1.5rem,3.5vw,2.5rem)] leading-[1.2] tracking-tight text-warm-500 font-light">
+              &ldquo;I like making things and I tend to gather people to learn alongside me&rdquo;
+            </p>
           </motion.div>
+
+          {/* Right — memoji with depth displacement */}
+          <div className="hidden md:block shrink-0">
+            <MemojiHead className="w-80 lg:w-96" />
+          </div>
         </div>
       </div>
+
+      {/* Contact row — pinned to bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="flex items-center gap-6 pb-8 font-mono text-sm"
+      >
+        <a
+          href="mailto:raph@inwonder.xyz"
+          className="text-warm-400 hover:text-accent transition-colors"
+        >
+          raph@inwonder.xyz
+        </a>
+        <span className="text-warm-300">&middot;</span>
+        <a
+          href="https://www.linkedin.com/in/raphaelsisa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-warm-400 hover:text-accent transition-colors"
+        >
+          LinkedIn &#x2197;
+        </a>
+        <span className="text-warm-300">&middot;</span>
+        <a
+          href="https://github.com/raph-sisa"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-warm-400 hover:text-accent transition-colors"
+        >
+          GitHub &#x2197;
+        </a>
+      </motion.div>
     </section>
   )
 }
