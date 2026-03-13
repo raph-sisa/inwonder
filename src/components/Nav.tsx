@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom'
 
-interface NavProps {
-  onOpenWork?: () => void
-  onOpenCuriosities?: () => void
-}
-
-export function Nav({ onOpenWork, onOpenCuriosities }: NavProps) {
+export function Nav() {
   return (
     <nav className="bg-warm-50/80 backdrop-blur-md border-b border-warm-200/40">
       <div className="max-w-6xl mx-auto px-6 sm:px-12 h-14 flex items-center justify-between">
@@ -16,19 +11,25 @@ export function Nav({ onOpenWork, onOpenCuriosities }: NavProps) {
           * In Wonder
         </Link>
 
-        <div className="flex gap-6 font-mono text-sm">
-          <button
-            onClick={onOpenWork}
-            className="text-warm-400 hover:text-accent transition-colors cursor-pointer"
+        <div className="flex gap-6 font-mono text-sm font-medium">
+          <a
+            href="#work"
+            className="text-warm-700 hover:text-accent transition-colors"
           >
             Work
-          </button>
-          <button
-            onClick={onOpenCuriosities}
-            className="text-warm-400 hover:text-accent transition-colors cursor-pointer"
+          </a>
+          <a
+            href="#curiosities"
+            className="text-warm-700 hover:text-accent transition-colors"
           >
             Curiosities
-          </button>
+          </a>
+          <a
+            href="#contact"
+            className="text-warm-700 hover:text-accent transition-colors"
+          >
+            Contact
+          </a>
         </div>
       </div>
     </nav>

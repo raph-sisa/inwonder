@@ -35,8 +35,8 @@
 @theme {
   --font-sans: 'Satoshi', system-ui, sans-serif;
   --font-display: 'Instrument Serif', Georgia, serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-  --color-warm-50: #fdf8f4;
+  --font-mono: 'Satoshi', system-ui, sans-serif;
+  --color-warm-50: #F5F5F7;
   --color-warm-100: #f5ede6;
   --color-warm-200: #e8ddd3;
   --color-warm-300: #d6c8ba;
@@ -46,8 +46,8 @@
   --color-warm-700: #433a32;
   --color-warm-800: #2c2420;
   --color-warm-900: #1a1310;
-  --color-accent: #c2703e;
-  --color-accent-light: #d4915f;
+  --color-accent: #5DBBAC;
+  --color-accent-light: #7DCFC2;
 }
 
 html.lenis, html.lenis body {
@@ -60,6 +60,11 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
+}
+
+/* Smooth scroll-snap transitions */
+[data-lenis-prevent] {
+  scroll-behavior: smooth;
 }
 
 
@@ -83,6 +88,15 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
+}
+
+/* Hide scrollbar but keep scrollable */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 ::selection {
