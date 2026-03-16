@@ -87,13 +87,12 @@ export function HapticDesignSystemContent() {
             learnable, and unmistakable — even while walking, cooking, or talking.
           </p>
           <p>
-            No wearable on the market today has solved this. Apple Watch, Pixel
-            Watch, AirPods, WHOOP, Fitbit — every device uses haptics as a
-            secondary channel backed by a screen. None have designed haptics as
-            the <strong className="text-warm-800">primary</strong> feedback system,
-            and{' '}
-            <strong className="text-warm-800">none include an explicit "learn the
-            haptics" tutorial during onboarding</strong>.
+            Wearables like Apple Watch, Pixel Watch, and Fitbit all use haptics —
+            but as a secondary channel backed by a screen. Even Oura Ring, which
+            has no display, uses vibration for simple alerts, not as a{' '}
+            <strong className="text-warm-800">full feedback vocabulary for complex
+            interaction states</strong>. There's no established playbook for
+            designing haptics as a device's sole communication channel.
           </p>
         </div>
       </div>
@@ -114,7 +113,7 @@ export function HapticDesignSystemContent() {
         </div>
         <div className="bg-warm-50 border border-warm-200 rounded-lg p-3">
           <p className="text-xl font-bold text-warm-900">0</p>
-          <p className="text-xs text-warm-400">Existing precedents</p>
+          <p className="text-xs text-warm-400">Established playbooks</p>
         </div>
       </div>
 
@@ -143,9 +142,10 @@ export function HapticDesignSystemContent() {
             <div className="bg-warm-50 border border-warm-200 rounded-lg p-4">
               <p className="font-mono text-xs text-accent mb-1">Cognitive ceiling</p>
               <p className="text-sm text-warm-600 leading-relaxed">
-                6–8 patterns is the safe vocabulary size. 10–12 is a stretch with
-                training. Only 2–3 intensity levels are reliably distinguishable
-                (Weber fraction ~20% for vibrotactile amplitude).
+                Research suggests 6–8 patterns as a practical vocabulary ceiling,
+                with 10–12 achievable with dedicated training. Only 2–3 intensity
+                levels are reliably distinguishable — the Weber fraction for
+                vibrotactile amplitude varies by body site but is roughly 15–25%.
               </p>
             </div>
             <div className="bg-warm-50 border border-warm-200 rounded-lg p-4">
@@ -153,8 +153,10 @@ export function HapticDesignSystemContent() {
               <p className="text-sm text-warm-600 leading-relaxed">
                 Morse code uses just 2 primitives. Braille uses binary encoding
                 and global shape recognition. Musical rhythm creates expectation
-                through meter. Tacton research shows rhythm achieves 93% recognition
-                — the best single differentiating dimension.
+                through meter. Tacton research shows rhythm achieves up to 93%
+                recognition in lab settings — the strongest single differentiating
+                dimension, though real-world performance varies with context and
+                body site.
               </p>
             </div>
             <div className="bg-warm-50 border border-warm-200 rounded-lg p-4">
@@ -169,19 +171,20 @@ export function HapticDesignSystemContent() {
             <div className="bg-warm-50 border border-warm-200 rounded-lg p-4">
               <p className="font-mono text-xs text-accent mb-1">Arm fatigue</p>
               <p className="text-sm text-warm-600 leading-relaxed">
-                The ring-to-mouth gesture requires a sustained raised arm. Research
-                shows comfortable duration at shoulder height is 29–160 seconds.
-                75% of participants in mid-air gesture studies tap out before 30
-                minutes. Vibration perception degrades with muscle fatigue.
+                The ring-to-mouth gesture requires a sustained raised arm.
+                Comfortable hold duration at shoulder height varies widely
+                (roughly 30 seconds to a few minutes depending on individual
+                and posture). Vibration perception degrades with muscle fatigue,
+                which matters for longer recording sessions.
               </p>
             </div>
             <div className="bg-warm-50 border border-warm-200 rounded-lg p-4">
               <p className="font-mono text-xs text-accent mb-1">Social acceptability</p>
               <p className="text-sm text-warm-600 leading-relaxed">
-                74% of voice assistant users prefer using them at home. AirPods
-                normalized talking to "nobody" via plausible deniability. The
-                ring-to-mouth gesture has no existing social script — bystanders
-                have no framework to interpret it.
+                Voice assistant usage still skews heavily toward private settings,
+                though AirPods have normalized talking to "nobody" via plausible
+                deniability. The ring-to-mouth gesture has no existing social
+                script — bystanders have no framework to interpret it.
               </p>
             </div>
           </div>
@@ -207,9 +210,9 @@ export function HapticDesignSystemContent() {
           </p>
           <p>
             Rhythm became the primary differentiator — not intensity, not duration.
-            The research is clear: rhythm achieves 93% recognition accuracy as a
-            single dimension, while intensity tops out at 2–3 distinguishable
-            levels. So tap count and spacing do the heavy lifting. Sharp waveforms
+            Across tacton research, rhythm consistently outperforms other
+            dimensions for recognition, while intensity tops out at 2–3
+            distinguishable levels. So tap count and spacing do the heavy lifting. Sharp waveforms
             signal mechanical/digital states. Rounded waveforms signal
             organic/positive outcomes.
           </p>
@@ -231,7 +234,7 @@ export function HapticDesignSystemContent() {
         <div className="mt-4 space-y-2 font-mono text-xs">
           <div className="flex gap-3 items-start bg-warm-50 border border-warm-200 rounded-lg p-3">
             <span className="text-accent shrink-0 mt-0.5">Hold &gt;300ms</span>
-            <span className="text-warm-600">Confirm haptic fires. Recording begins. Local response in &lt;50ms — 20x faster than Siri's ~1s wake-to-chime.</span>
+            <span className="text-warm-600">Confirm haptic fires. Recording begins. Local haptic response in &lt;50ms — no cloud round-trip, no processing delay.</span>
           </div>
           <div className="flex gap-3 items-start bg-warm-50 border border-warm-200 rounded-lg p-3">
             <span className="text-accent shrink-0 mt-0.5">Speech → silence</span>
