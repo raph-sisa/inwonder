@@ -7,6 +7,8 @@ import { BumoIllustration } from '../components/illustrations/BumoIllustration'
 import { AnalogNetworkIllustration } from '../components/illustrations/AnalogNetworkIllustration'
 import { FabricatedIllustration } from '../components/illustrations/FabricatedIllustration'
 import { HapticRingIllustration } from '../components/illustrations/HapticRingIllustration'
+import { HMIAlarmSystemContent } from '../components/studies/HMIAlarmSystem'
+import { HMIIllustration } from '../components/illustrations/HMIIllustration'
 
 export interface CaseStudy {
   id: string
@@ -72,6 +74,18 @@ export const caseStudies: CaseStudy[] = [
     category: 'curiosity',
     content: HapticDesignSystemContent,
     illustration: HapticRingIllustration,
+  },
+  {
+    id: 'hmi-alarm-system',
+    title: 'The Case for Boring Design',
+    byline: 'Exploring High-Performance HMI principles for safety-critical hardware control',
+    teaser: 'A curiosity-driven exploration of how color philosophy affects operator safety in rocket engine test software — with a working prototype you can toggle yourself.',
+    tags: ['Safety-Critical HMI', 'Design Systems', 'Research Synthesis', 'Prototyping in Code'],
+    thumbnail: '/images/analog-network/process/depth-map.png',
+    available: true,
+    category: 'curiosity',
+    content: HMIAlarmSystemContent,
+    illustration: HMIIllustration,
   },
   {
     id: 'analog-network',
