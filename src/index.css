@@ -39,10 +39,10 @@
   --color-bg: #f9f9f8;
   --color-text: #111111;
   --color-text-muted: #666666;
-  --color-primary: #149cb8;
-  --color-primary-light: #17b1d0;
-  --color-accent: #149cb8;
-  --color-accent-light: #17b1d0;
+  --color-primary: #0e7a90;
+  --color-primary-light: #149cb8;
+  --color-accent: #0e7a90;
+  --color-accent-light: #149cb8;
   --color-accent-warm: #e7f1f3;
   --color-warm-50: #f9f9f8;
   --color-warm-100: #F5F5F5;
@@ -61,6 +61,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -80,4 +81,34 @@ body::before {
 ::selection {
   background-color: var(--color-primary);
   color: white;
+}
+
+/* Global focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
