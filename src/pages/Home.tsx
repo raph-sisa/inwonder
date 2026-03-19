@@ -47,7 +47,7 @@ export function Home() {
               aria-required="true"
               className="flex-grow rounded-xl bg-white border border-primary/20 px-4 py-3 focus:ring-2 focus:ring-primary text-warm-900"
             />
-            <button className="bg-primary text-white font-bold rounded-xl px-8 py-3 hover:opacity-90 transition-opacity w-full sm:w-auto min-h-[44px]">
+            <button className="bg-primary text-white font-bold rounded-xl px-8 py-3 hover:opacity-90 transition-[transform,opacity] duration-160 active:scale-[0.97] w-full sm:w-auto min-h-[44px]">
               Subscribe
             </button>
           </form>
@@ -72,7 +72,7 @@ export function Home() {
           <div className="flex flex-col gap-4">
             <a
               href="mailto:raph@inwonder.xyz"
-              className="inline-flex items-center gap-2 px-6 py-3 text-white bg-primary hover:opacity-90 rounded-full transition-opacity font-bold text-sm min-h-[44px]"
+              className="inline-flex items-center gap-2 px-6 py-3 text-white bg-primary hover:opacity-90 rounded-full transition-[transform,opacity] duration-160 active:scale-[0.97] font-bold text-sm min-h-[44px] hover-lift"
             >
               raph@inwonder.xyz
             </a>

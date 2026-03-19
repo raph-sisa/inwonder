@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import type { ReactNode } from 'react'
 
 interface TextRevealProps {
@@ -22,6 +22,11 @@ export function TextReveal({
 }: TextRevealProps) {
   const words = children.split(' ')
   const MotionTag = motion.create(Tag)
+  const shouldReduceMotion = useReducedMotion()
+
+  if (shouldReduceMotion) {
+    return <Tag className={className}>{children}</Tag>
+  }
 
   return (
     <MotionTag
@@ -45,7 +50,7 @@ export function TextReveal({
                 visible: {
                   y: 0,
                   opacity: 1,
-                  transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+                  transition: { duration: 0.6, ease: [0.23, 1, 0.32, 1] },
                 },
               }}
             >
@@ -59,7 +64,7 @@ export function TextReveal({
   )
 }
 
-// Simple fade-up with power3.out easing
+// Simple fade-up reveal
 interface RevealProps {
   children: ReactNode
   className?: string
@@ -68,13 +73,19 @@ interface RevealProps {
 }
 
 export function Reveal({ children, className = '', delay = 0, once = true }: RevealProps) {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 24 }}
+      initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, margin: '-80px' }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: shouldReduceMotion ? 0.3 : 0.7,
+        delay,
+        ease: [0.23, 1, 0.32, 1],
+      }}
     >
       {children}
     </motion.div>
