@@ -3,7 +3,7 @@ import { caseStudies } from '../data/caseStudies'
 import { TextReveal, Reveal } from './TextReveal'
 import type { CaseStudy } from '../data/caseStudies'
 
-const curiosities = caseStudies.filter((s) => s.category === 'curiosity')
+const curiosities = caseStudies.filter((s) => (s.category as string) === 'curiosity')
 
 function CuriosityCard({ item, index }: { item: CaseStudy; index: number }) {
   const inner = (
