@@ -12,69 +12,56 @@ export function Hero({ scrollY = 0 }: HeroProps) {
   const memojiOpacity = Math.max(0, 1 - scrollY / 400)
 
   return (
-    <section className="h-full flex flex-col justify-between px-6 sm:px-12 max-w-6xl mx-auto">
-      {/* Main content — vertically centered, two columns */}
-      <div className="flex-1 flex items-center">
-        <div className="flex items-center justify-between w-full gap-12">
-          {/* Left — text with parallax */}
+    <section className="h-full flex flex-col justify-center px-6 lg:px-20 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between w-full gap-12">
+        {/* Left — text with parallax */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-3xl"
+          style={{
+            transform: `translateY(${textOffset}px)`,
+            opacity: textOpacity,
+            willChange: 'transform, opacity',
+          }}
+        >
+          {/* Mobile memoji */}
           <motion.div
+            className="md:hidden mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl"
-            style={{
-              transform: `translateY(${textOffset}px)`,
-              opacity: textOpacity,
-              willChange: 'transform, opacity',
-            }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Mobile memoji — static PNG above name */}
-            <motion.div
-              className="md:hidden mb-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <img
-                src={asset('/images/memoji.png')}
-                alt="Raphael Sisa memoji"
-                className="w-24 h-24 object-contain"
-              />
-            </motion.div>
-
-            <h1 className="font-display font-bold text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.08] tracking-tight text-warm-900 mb-6">
-              Raphael Sisa
-            </h1>
-            <p className="font-display text-[clamp(1.5rem,3.5vw,2.5rem)] leading-[1.2] tracking-tight text-warm-500 font-light">
-              I build, not just design. I turn enterprise complexity into software people actually want to use. I also tend to gather people to learn alongside me.
-            </p>
-            <span className="inline-block mt-4 font-mono text-sm text-warm-400">
-              Based in LA &middot; Open to founding-stage roles
-            </span>
-
-            {/* CTA */}
-            <motion.div
-              className="mt-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <a
-                href="#work"
-                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-mono text-white bg-accent hover:bg-accent-light rounded-lg transition-colors"
-              >
-                View my work &darr;
-              </a>
-            </motion.div>
+            <img
+              src={asset('/images/memoji.png')}
+              alt="Raphael Sisa memoji"
+              className="w-24 h-24 object-contain"
+            />
           </motion.div>
 
-          {/* Right — 3D memoji on desktop, fades out on scroll */}
-          <div
-            className="hidden md:block shrink-0"
-            style={{ opacity: memojiOpacity }}
-          >
-            <MemojiHead className="w-80 lg:w-96" />
-          </div>
+          <h1 className="font-display text-7xl lg:text-8xl leading-[0.9] mb-8 italic">
+            Design, code,{' '}
+            <span className="text-primary">and the space</span>{' '}
+            between.
+          </h1>
+
+          <p className="text-xl text-warm-500 max-w-xl leading-relaxed">
+            Design technologist and builder with a background spanning product design, research, and strategy. I make complex systems feel simple — and gather people to learn alongside me.
+          </p>
+
+          <span className="inline-block mt-4 font-mono text-sm text-warm-400">
+            Raphael Sisa &middot; Based in LA &middot; Open to founding-stage roles
+          </span>
+
+        </motion.div>
+
+        {/* Right — 3D memoji on desktop */}
+        <div
+          className="hidden md:block shrink-0"
+          style={{ opacity: memojiOpacity }}
+        >
+          <MemojiHead className="w-80 lg:w-96" />
         </div>
       </div>
     </section>

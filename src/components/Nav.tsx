@@ -2,36 +2,19 @@ import { Link } from 'react-router-dom'
 
 export function Nav() {
   return (
-    <nav className="bg-warm-50/80 backdrop-blur-md border-b border-warm-200/40">
-      <div className="max-w-6xl mx-auto px-6 sm:px-12 h-14 flex items-center justify-between">
-        <Link
-          to="/"
-          className="font-mono text-sm text-accent hover:text-accent-light transition-colors"
-        >
+    <header className="bg-warm-50/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link to="/" className="text-lg font-bold tracking-tight text-warm-900">
           * In Wonder
         </Link>
 
-        <div className="flex gap-6 font-mono text-sm font-medium">
-          <a
-            href="#work"
-            className="text-warm-700 hover:text-accent transition-colors"
-          >
-            Work
-          </a>
-          <a
-            href="#curiosities"
-            className="text-warm-700 hover:text-accent transition-colors"
-          >
-            Curiosities
-          </a>
-          <a
-            href="#contact"
-            className="text-warm-700 hover:text-accent transition-colors"
-          >
-            Contact
-          </a>
-        </div>
+<a
+          href="#contact"
+          className="bg-primary text-white rounded-full px-6 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
+        >
+          Contact
+        </a>
       </div>
-    </nav>
+    </header>
   )
 }
