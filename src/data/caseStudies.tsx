@@ -8,6 +8,7 @@ import { AnalogNetworkIllustration } from '../components/illustrations/AnalogNet
 import { FabricatedIllustration } from '../components/illustrations/FabricatedIllustration'
 import { HapticRingIllustration } from '../components/illustrations/HapticRingIllustration'
 import { HMIAlarmSystemContent } from '../components/studies/HMIAlarmSystem'
+import { SpyCopilotContent } from '../components/studies/SpyCopilot'
 import { HMIIllustration } from '../components/illustrations/HMIIllustration'
 
 export interface CaseStudy {
@@ -26,6 +27,17 @@ export interface CaseStudy {
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: 'spy-copilot',
+    title: 'SPY Trading Copilot',
+    byline: 'A real-time AI trading copilot built in 6 hours with Claude Code',
+    teaser: 'Built a real-time SPY options trading copilot that streams live market data, runs AI analysis every 60 seconds, and executes bracket orders — because taking screenshots and pasting them into Claude was too slow.',
+    tags: ['AI/ML', 'Real-Time Systems', 'Claude Code', 'Perplexity'],
+    thumbnail: '/images/spy-copilot/dashboard-zones.png',
+    available: true,
+    category: 'curiosity',
+    content: SpyCopilotContent,
+  },
   {
     id: 'aeg',
     title: 'Global Touring Platform',
