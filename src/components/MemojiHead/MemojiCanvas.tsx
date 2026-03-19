@@ -58,8 +58,8 @@ export function MemojiCanvas({ mouseX, mouseY, enabled = true, onLoad }: MemojiC
     if (!gl) return
 
     const [colorImg, depthImg] = await Promise.all([
-      loadImage('/images/memoji.png'),
-      loadImage('/images/memoji-depth.png'),
+      loadImage(`${import.meta.env.BASE_URL}images/memoji.png`),
+      loadImage(`${import.meta.env.BASE_URL}images/memoji-depth.png`),
     ])
 
     const aspect = colorImg.height / colorImg.width

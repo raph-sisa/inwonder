@@ -1,3 +1,5 @@
+import { asset } from '../../utils/assets'
+
 export function SpyCopilotContent() {
   return (
     <div className="space-y-10">
@@ -91,7 +93,7 @@ export function SpyCopilotContent() {
 
       {/* Hero screenshot */}
       <img
-        src="/images/spy-copilot/dashboard-zones.png"
+        src={asset('/images/spy-copilot/dashboard-zones.png')}
         alt="SPY Copilot command center showing live chart with confluence zones, VWAP reclaim pattern, and signal cards"
         className="w-full rounded-lg border border-warm-200"
       />
@@ -134,7 +136,7 @@ export function SpyCopilotContent() {
       <div className="grid grid-cols-2 gap-3">
         <div>
           <img
-            src="/images/spy-copilot/dashboard-signals.png"
+            src={asset('/images/spy-copilot/dashboard-signals.png')}
             alt="Command center with live candlestick chart, VWAP, EMA, RSI, and active trade signals"
             className="w-full rounded-lg border border-warm-200"
           />
@@ -142,7 +144,7 @@ export function SpyCopilotContent() {
         </div>
         <div>
           <img
-            src="/images/spy-copilot/research.png"
+            src={asset('/images/spy-copilot/research.png')}
             alt="AI research history showing Claude Sonnet market analysis with technical, macro, and sentiment notes"
             className="w-full rounded-lg border border-warm-200"
           />
@@ -150,7 +152,7 @@ export function SpyCopilotContent() {
         </div>
         <div>
           <img
-            src="/images/spy-copilot/chain.png"
+            src={asset('/images/spy-copilot/chain.png')}
             alt="1DTE options chain with real-time bid/ask prices for calls and puts"
             className="w-full rounded-lg border border-warm-200"
           />
@@ -158,7 +160,7 @@ export function SpyCopilotContent() {
         </div>
         <div>
           <img
-            src="/images/spy-copilot/risk.png"
+            src={asset('/images/spy-copilot/risk.png')}
             alt="Risk management panel with position sizing, loss limits, and conviction-based sizing rules"
             className="w-full rounded-lg border border-warm-200"
           />

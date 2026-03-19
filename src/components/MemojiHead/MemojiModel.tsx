@@ -5,7 +5,7 @@ import * as THREE from 'three'
 import { motion } from 'framer-motion'
 import { MOTION_CONFIG } from './constants'
 
-const MODEL_URL = '/models/memoji.glb'
+const MODEL_URL = `${import.meta.env.BASE_URL}models/memoji.glb`
 const DRACO_URL = 'https://www.gstatic.com/draco/versioned/decoders/1.5.7/'
 
 // Preload the model with Draco decoder

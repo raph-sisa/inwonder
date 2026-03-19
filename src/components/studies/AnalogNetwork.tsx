@@ -1,17 +1,18 @@
 import { ImageGallery } from '../ImageGallery'
+import { asset } from '../../utils/assets'
 
 const processImages = [
-  { src: '/images/analog-network/process/lineart.png', alt: 'Lineart from GIS data', caption: 'Lineart extracted from GIS data — ControlNet input' },
-  { src: '/images/analog-network/process/depth-map.png', alt: 'Depth map', caption: 'Depth map for isometric perspective' },
-  { src: '/images/analog-network/process/comfyui-map-01.png', alt: 'ComfyUI output', caption: 'ComfyUI output — dual ControlNet' },
-  { src: '/images/analog-network/process/comfyui-map-02.png', alt: 'Later iteration', caption: 'Later iteration — sci-fi aesthetic' },
+  { src: asset('/images/analog-network/process/lineart.png'), alt: 'Lineart from GIS data', caption: 'Lineart extracted from GIS data — ControlNet input' },
+  { src: asset('/images/analog-network/process/depth-map.png'), alt: 'Depth map', caption: 'Depth map for isometric perspective' },
+  { src: asset('/images/analog-network/process/comfyui-map-01.png'), alt: 'ComfyUI output', caption: 'ComfyUI output — dual ControlNet' },
+  { src: asset('/images/analog-network/process/comfyui-map-02.png'), alt: 'Later iteration', caption: 'Later iteration — sci-fi aesthetic' },
 ]
 
 const eventImages = [
-  { src: '/images/analog-network/event/rings-and-zine.jpg', alt: 'Rings and field manual', caption: 'Carriers with rings and completed field manual' },
-  { src: '/images/analog-network/event/3d-printer-booth.jpg', alt: '3D printer at booth', caption: 'Live 3D printing at the Art Walk' },
-  { src: '/images/analog-network/event/carriers-with-rings.jpg', alt: 'Carriers at dusk', caption: 'Carriers at dusk under the Poster Biennial' },
-  { src: '/images/analog-network/event/participant-zine.jpg', alt: 'Participant with zine', caption: 'A participant exploring the field manual' },
+  { src: asset('/images/analog-network/event/rings-and-zine.jpg'), alt: 'Rings and field manual', caption: 'Carriers with rings and completed field manual' },
+  { src: asset('/images/analog-network/event/3d-printer-booth.jpg'), alt: '3D printer at booth', caption: 'Live 3D printing at the Art Walk' },
+  { src: asset('/images/analog-network/event/carriers-with-rings.jpg'), alt: 'Carriers at dusk', caption: 'Carriers at dusk under the Poster Biennial' },
+  { src: asset('/images/analog-network/event/participant-zine.jpg'), alt: 'Participant with zine', caption: 'A participant exploring the field manual' },
 ]
 
 export function AnalogNetworkContent() {
@@ -50,7 +51,7 @@ export function AnalogNetworkContent() {
 
       {/* Hero image */}
       <img
-        src="/images/analog-network/event/carriers-with-rings.jpg"
+        src={asset('/images/analog-network/event/carriers-with-rings.jpg')}
         alt="Carriers showing rings at dusk"
         className="w-full rounded-lg"
       />

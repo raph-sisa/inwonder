@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { MemojiHead } from './MemojiHead'
+import { asset } from '../utils/assets'
 
 interface HeroProps {
   scrollY?: number
@@ -35,7 +36,7 @@ export function Hero({ scrollY = 0 }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               <img
-                src="/images/memoji.png"
+                src={asset('/images/memoji.png')}
                 alt="Raphael Sisa memoji"
                 className="w-24 h-24 object-contain"
               />

@@ -1,3 +1,5 @@
+import { asset } from '../../utils/assets'
+
 export function HMIAlarmSystemContent() {
   return (
     <div className="space-y-10">
@@ -283,7 +285,7 @@ export function HMIAlarmSystemContent() {
           >
             <div className="relative rounded-lg overflow-hidden border border-warm-200 shadow-lg transition-all group-hover:border-accent group-hover:shadow-xl">
               <img
-                src="/images/hmi-alarm-system/prototype-revel-current.png"
+                src={asset('/images/hmi-alarm-system/prototype-revel-current.png')}
                 alt="HMI Alarm System Prototype — Gas Liquid System P&ID with green piping, colored tanks, and alarm states"
                 className="w-full"
               />
