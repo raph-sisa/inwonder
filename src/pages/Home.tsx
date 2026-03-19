@@ -1,78 +1,29 @@
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Hero } from '../components/Hero'
 import { CaseStudyGrid } from '../components/CaseStudyGrid'
 import { Curiosities } from '../components/Curiosities'
 
 export function Home() {
-  const scrollRef = useRef<HTMLElement>(null)
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
-    const el = scrollRef.current
-    if (!el) return
-    const handler = () => setScrollY(el.scrollTop)
-    el.addEventListener('scroll', handler, { passive: true })
-    return () => el.removeEventListener('scroll', handler)
-  }, [])
-
-  useEffect(() => {
-    const el = scrollRef.current
-    if (!el) return
-    const sections = () => el.querySelectorAll<HTMLElement>(':scope > section, :scope > footer')
-
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return
-      // Don't hijack if user is in an input
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
-
-      const sects = sections()
-      if (!sects.length) return
-
-      // Use offsetTop relative to the scroll container
-      const scrollTop = el.scrollTop
-
-      if (e.key === 'ArrowDown') {
-        for (let i = 0; i < sects.length; i++) {
-          const top = sects[i].offsetTop - el.offsetTop
-          if (top > scrollTop + 2) {
-            e.preventDefault()
-            el.scrollTo({ top, behavior: 'smooth' })
-            return
-          }
-        }
-      } else {
-        for (let i = sects.length - 1; i >= 0; i--) {
-          const top = sects[i].offsetTop - el.offsetTop
-          if (top < scrollTop - 2) {
-            e.preventDefault()
-            el.scrollTo({ top, behavior: 'smooth' })
-            return
-          }
-        }
-      }
-    }
-
-    // Use capture phase to intercept before default scroll
-    window.addEventListener('keydown', handleKey, { capture: true })
-    return () => window.removeEventListener('keydown', handleKey, { capture: true })
+    const handler = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handler, { passive: true })
+    return () => window.removeEventListener('scroll', handler)
   }, [])
 
   return (
-    <main
-      ref={scrollRef}
-      className="h-screen overflow-y-auto scroll-smooth snap-y snap-proximity"
-      data-lenis-prevent
-    >
-      <section className="h-[85vh] relative snap-start" style={{ overflow: 'clip' }}>
+    <main>
+      <section className="h-[85vh] relative" style={{ overflow: 'clip' }}>
         <Hero scrollY={scrollY} />
       </section>
-      <section className="min-h-screen snap-start">
+      <section className="min-h-screen">
         <CaseStudyGrid />
       </section>
-      <section className="min-h-screen snap-start">
+      <section className="min-h-screen">
         <Curiosities />
       </section>
-      <footer id="contact" className="snap-start">
+      <footer id="contact">
         <div className="max-w-6xl mx-auto px-6 sm:px-12 py-24">
           <p className="font-mono text-sm text-accent mb-3">Get in touch</p>
           <h2 className="font-display font-bold text-4xl sm:text-5xl text-warm-900 mb-4 tracking-tight">
