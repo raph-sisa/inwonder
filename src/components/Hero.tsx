@@ -12,7 +12,7 @@ export function Hero({ scrollY = 0 }: HeroProps) {
   const memojiOpacity = Math.max(0, 1 - scrollY / 400)
 
   return (
-    <section className="h-full flex flex-col justify-center px-6 lg:px-20 max-w-7xl mx-auto">
+    <section className="h-full flex flex-col justify-center px-6 lg:px-20 pt-16 md:pt-24 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-8 md:gap-12">
         {/* Left — text with parallax */}
         <motion.div
