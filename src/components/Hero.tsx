@@ -42,17 +42,16 @@ export function Hero({ scrollY = 0 }: HeroProps) {
           </motion.div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-8 italic">
-            Design, code,{' '}
-            <span className="text-primary">and the space</span>{' '}
-            between.
+            Designing clearer ways through{' '}
+            <span className="text-primary">complex systems.</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-warm-500 max-w-xl leading-relaxed">
-            Design technologist and builder with a background spanning product design, research, and strategy. I make complex systems feel simple — and gather people to learn alongside me.
+            I&rsquo;m Raphael Sisa, a senior product designer, researcher, and prototyper. I help teams understand complicated human and operational systems, turn research into confident decisions, and build tools people can actually use.
           </p>
 
           <span className="inline-block mt-4 text-sm text-warm-500">
-            Raphael Sisa &middot; Based in LA &middot; Open to founding-stage roles
+            Based in Long Beach, California &middot; Open to senior IC and lead roles, consulting, and contract work
           </span>
 
         </motion.div>
