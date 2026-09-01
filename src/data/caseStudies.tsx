@@ -9,6 +9,7 @@ import { asset } from '../utils/assets'
 export interface CaseStudy {
   id: string
   title: string
+  cardTitle?: string
   byline: string
   teaser?: string
   tags: string[]
@@ -22,17 +23,6 @@ export interface CaseStudy {
 }
 
 export const caseStudies: CaseStudy[] = [
-  {
-    id: 'spy-copilot',
-    title: 'SPY Trading Copilot',
-    byline: 'A real-time AI trading copilot built in 6 hours with Claude Code',
-    teaser: 'Built a real-time SPY options trading copilot that streams live market data, runs AI analysis every 60 seconds, and executes bracket orders — because taking screenshots and pasting them into Claude was too slow.',
-    tags: ['AI/ML', 'Real-Time Systems', 'Claude Code', 'Perplexity'],
-    thumbnail: asset('/images/stitch-spy2.png'),
-    available: true,
-    category: 'work',
-    content: SpyCopilotContent,
-  },
   {
     id: 'aeg',
     title: 'Global Touring Platform',
@@ -56,29 +46,9 @@ export const caseStudies: CaseStudy[] = [
     content: BumoContent,
   },
   {
-    id: 'fabricated',
-    title: 'Fabricated',
-    byline: 'A hands-on hardware build series where beginners use AI to make real devices',
-    tags: ['Hardware', 'Claude Code', 'Workshop'],
-    thumbnail: asset('/images/stitch-fabricated.png'),
-    available: true,
-    externalUrl: 'https://fabricated.inwonder.xyz',
-    category: 'work',
-  },
-  {
-    id: 'haptic-design-system',
-    title: 'Haptic Design System',
-    byline: 'Designing a feedback language for a screenless device — from first principles',
-    teaser: 'A voice-capture ring with no screen needs to communicate entirely through vibration. I synthesized research across 6 domains, defined a 5-pattern haptic vocabulary, and built an interactive prototype to make the invisible tangible.',
-    tags: ['Systems Design', 'Research Synthesis', 'Novel Interaction'],
-    thumbnail: asset('/images/stitch-haptic.png'),
-    available: true,
-    category: 'work',
-    content: HapticDesignSystemContent,
-  },
-  {
     id: 'hmi-alarm-system',
     title: 'The Case for Boring Design',
+    cardTitle: 'Designing for Safety-Critical Decisions',
     byline: 'Exploring High-Performance HMI principles for safety-critical hardware control',
     teaser: 'A curiosity-driven exploration of how color philosophy affects operator safety in rocket engine test software — with a working prototype you can toggle yourself.',
     tags: ['Safety-Critical HMI', 'Design Systems', 'Research Synthesis', 'Prototyping in Code'],
@@ -96,5 +66,38 @@ export const caseStudies: CaseStudy[] = [
     available: true,
     category: 'work',
     content: AnalogNetworkContent,
+  },
+  {
+    id: 'haptic-design-system',
+    title: 'Haptic Design System',
+    byline: 'Designing a feedback language for a screenless device — from first principles',
+    teaser: 'A voice-capture ring with no screen needs to communicate entirely through vibration. I synthesized research across 6 domains, defined a 5-pattern haptic vocabulary, and built an interactive prototype to make the invisible tangible.',
+    tags: ['Systems Design', 'Research Synthesis', 'Novel Interaction'],
+    thumbnail: asset('/images/stitch-haptic.png'),
+    available: true,
+    category: 'work',
+    content: HapticDesignSystemContent,
+  },
+  {
+    id: 'spy-copilot',
+    title: 'SPY Trading Copilot',
+    cardTitle: 'AI Copilot for Real-Time Decision Support',
+    byline: 'A real-time AI trading copilot built in 6 hours with Claude Code',
+    teaser: 'Built a real-time SPY options trading copilot that streams live market data, runs AI analysis every 60 seconds, and executes bracket orders — because taking screenshots and pasting them into Claude was too slow.',
+    tags: ['AI/ML', 'Real-Time Systems', 'Claude Code', 'Perplexity'],
+    thumbnail: asset('/images/stitch-spy2.png'),
+    available: true,
+    category: 'work',
+    content: SpyCopilotContent,
+  },
+  {
+    id: 'fabricated',
+    title: 'Fabricated',
+    byline: 'A hands-on hardware build series where beginners use AI to make real devices',
+    tags: ['Hardware', 'Claude Code', 'Workshop'],
+    thumbnail: asset('/images/stitch-fabricated.png'),
+    available: true,
+    externalUrl: 'https://fabricated.inwonder.xyz',
+    category: 'work',
   },
 ]
