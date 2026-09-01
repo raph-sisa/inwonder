@@ -31,12 +31,9 @@ export function Home() {
           <h2 id="bridge-focus-heading" className="font-display text-3xl sm:text-4xl md:text-5xl text-warm-900 mb-6 italic">
             Where I&rsquo;m applying this work next
           </h2>
-          <div className="max-w-3xl space-y-4 text-warm-500 text-base sm:text-lg leading-relaxed">
+          <div className="max-w-3xl text-warm-500 text-base sm:text-lg leading-relaxed">
             <p>
-              I&rsquo;m increasingly bringing my experience in research, systems design, and prototyping to tools that shape places&mdash;spatial intelligence, built-environment workflows, civic systems, infrastructure, and climate resilience.
-            </p>
-            <p>
-              I&rsquo;m especially interested in environments where expert users, fragmented data, legacy workflows, and consequential decisions meet.
+              I&rsquo;m drawn to products that shape how places are understood, planned, built, and operated&mdash;especially where expert users must navigate fragmented data and legacy tools.
             </p>
           </div>
           <ul className="flex flex-wrap gap-3 mt-8" aria-label="Areas of focus">
@@ -60,7 +57,7 @@ export function Home() {
               Let&rsquo;s talk
             </h2>
             <p className="text-warm-500 leading-relaxed max-w-lg">
-              I&rsquo;m available for senior product roles and select consulting engagements. I&rsquo;m especially interested in complex operational, spatial, civic, infrastructure, and climate-related systems.
+              If you&rsquo;re building tools for expert work, places, or infrastructure, I&rsquo;d love to hear what you&rsquo;re working on.
             </p>
           </div>
 
