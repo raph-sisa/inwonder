@@ -25,35 +25,6 @@ export function Home() {
         <CaseStudyGrid />
       </section>
 
-      {/* Newsletter / CTA */}
-      <section className="px-6 lg:px-20 py-20 border-t border-primary/10" aria-label="Newsletter signup">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 id="newsletter-heading" className="font-display text-3xl sm:text-4xl md:text-5xl mb-6 italic text-warm-900">
-            Stay in the loop.
-          </h2>
-          <p className="text-warm-500 mb-10">
-            Sign up for infrequent updates on new projects, narratives, and lab notes.
-          </p>
-          <form
-            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-            onSubmit={(e) => e.preventDefault()}
-            aria-labelledby="newsletter-heading"
-          >
-            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-            <input
-              id="newsletter-email"
-              type="email"
-              placeholder="Email address"
-              aria-required="true"
-              className="flex-grow rounded-xl bg-white border border-primary/20 px-4 py-3 focus:ring-2 focus:ring-primary text-warm-900"
-            />
-            <button className="bg-primary text-white font-bold rounded-xl px-8 py-3 hover:opacity-90 transition-[transform,opacity] duration-160 active:scale-[0.97] w-full sm:w-auto min-h-[44px]">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
-
       {/* Footer / Contact */}
       <footer id="contact" className="px-6 lg:px-20 py-12 border-t border-primary/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
@@ -65,7 +36,7 @@ export function Home() {
               Let&rsquo;s talk
             </h2>
             <p className="text-warm-500 leading-relaxed max-w-lg">
-              Open to founding-stage roles in LA. If you&rsquo;re building something interesting and need a product-design leader who ships, I&rsquo;d love to hear about it.
+              I&rsquo;m available for senior product roles and select consulting engagements. I&rsquo;m especially interested in complex operational, spatial, civic, infrastructure, and climate-related systems.
             </p>
           </div>
 
