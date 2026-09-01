@@ -25,6 +25,30 @@ export function Home() {
         <CaseStudyGrid />
       </section>
 
+      {/* Bridge focus */}
+      <section className="px-6 lg:px-20 py-20 border-t border-primary/10" aria-labelledby="bridge-focus-heading">
+        <div className="max-w-7xl mx-auto">
+          <h2 id="bridge-focus-heading" className="font-display text-3xl sm:text-4xl md:text-5xl text-warm-900 mb-6 italic">
+            Where I&rsquo;m applying this work next
+          </h2>
+          <div className="max-w-3xl space-y-4 text-warm-500 text-base sm:text-lg leading-relaxed">
+            <p>
+              I&rsquo;m increasingly bringing my experience in research, systems design, and prototyping to tools that shape places&mdash;spatial intelligence, built-environment workflows, civic systems, infrastructure, and climate resilience.
+            </p>
+            <p>
+              I&rsquo;m especially interested in environments where expert users, fragmented data, legacy workflows, and consequential decisions meet.
+            </p>
+          </div>
+          <ul className="flex flex-wrap gap-3 mt-8" aria-label="Areas of focus">
+            {['Spatial intelligence', 'Built-environment workflows', 'Civic and climate systems'].map((area) => (
+              <li key={area} className="rounded-full border border-primary/20 px-4 py-2 text-sm font-bold text-primary bg-primary/5">
+                {area}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Footer / Contact */}
       <footer id="contact" className="px-6 lg:px-20 py-12 border-t border-primary/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
