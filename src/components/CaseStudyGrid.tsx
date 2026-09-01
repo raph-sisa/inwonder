@@ -7,18 +7,24 @@ export function CaseStudyGrid() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section id="work" aria-label="Selected Work" className="px-6 lg:px-20 py-20 bg-primary/5">
+    <section id="work" aria-label="Featured Work" className="px-6 lg:px-20 py-20 bg-primary/5">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           <Reveal>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl">
-              Selected Work
+              Featured Work
             </h2>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <p className="text-warm-500 text-base sm:text-lg leading-relaxed max-w-3xl mt-4">
+              Research, strategy, and working prototypes for complex operational, technical, and physical-digital systems.
+            </p>
           </Reveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study, i) => {
+            const cardTitle = study.cardTitle ?? study.title
             const card = (
               <Reveal key={study.id} delay={i * 0.08}>
                 <div className={`group block cursor-pointer ${i % 3 === 1 ? 'lg:mt-12' : ''}`}>
@@ -32,7 +38,7 @@ export function CaseStudyGrid() {
                   >
                     <img
                       src={study.thumbnail}
-                      alt={`${study.title} — ${study.byline}`}
+                      alt={`${cardTitle} — ${study.byline}`}
                       className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.04]"
                       loading={i < 3 ? 'eager' : 'lazy'}
                     />
@@ -50,7 +56,7 @@ export function CaseStudyGrid() {
 
                   {/* Card text */}
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 text-warm-900">
-                    {study.title}
+                    {cardTitle}
                   </h3>
                   <p className="text-warm-500 text-sm sm:text-base">{study.byline}</p>
                 </div>
@@ -64,7 +70,7 @@ export function CaseStudyGrid() {
                   href={study.externalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${study.title} (opens in new tab)`}
+                  aria-label={`${cardTitle} (opens in new tab)`}
                 >
                   {card}
                 </a>
