@@ -17,7 +17,7 @@ export function CaseStudyGrid() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="text-warm-500 text-base sm:text-lg leading-relaxed max-w-3xl mt-4">
-              Research, strategy, and working prototypes for complex operational, technical, and physical-digital systems.
+              Enterprise platforms, AI-enabled workflows, and physical-digital experiments.
             </p>
           </Reveal>
         </div>
