@@ -15,9 +15,9 @@ Raphael Sisa is a product designer and design leader with 10+ years of experienc
 ## Selected Work
 
 ### Global Touring Platform
-- Role: Sole product designer
+- Role: Product designer on a blended AEG and vendor team, partnering closely with another designer
 - Domain: Enterprise, complex systems, change management
-- Summary: Designed enterprise tools for a global touring operations platform handling $1B+ in annual touring revenue. Navigated resistant stakeholders who relied on Excel for 20-30 years and shipped a hybrid architecture MVP that settled real shows.
+- Summary: Helped lead product design for a global touring operations platform handling $1B+ in annual revenue. Worked across subsidiary brands and touring teams in the U.S., UK, Asia, and Latin America to design a hybrid web-and-Excel architecture whose MVP settled real shows.
 
 ### Automated Supplier Pipeline
 - Role: Product designer, end-to-end delivery
