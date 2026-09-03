@@ -5,27 +5,33 @@ export function AEGContent() {
     <div className="space-y-10">
       <div className="bg-accent/5 rounded-lg p-5 border-l-4 border-accent">
         <p className="text-sm text-warm-600 leading-relaxed">
-          Designing enterprise tools in a high-stakes domain, navigating
-          resistant stakeholders, and shipping a platform that handles $1B+
-          in touring revenue.
+          Designing enterprise tools in a high-stakes domain, aligning touring
+          teams across brands and regions, and shipping a platform that handles
+          $1B+ in touring revenue.
         </p>
       </div>
 
       <p className="text-warm-700 leading-relaxed">
-        I owned product design for a global touring operations platform at a major
-        live entertainment company — the system that settles P&L for tours
-        generating over $1B in annual revenue. Veteran users who'd relied on
-        Excel for 20-30 years didn't want change. I designed a hybrid
-        architecture that met them where they were, and the MVP launched to
-        settle real shows.
+        I helped lead product design for a global touring operations platform at
+        a major live entertainment company — the system that settles P&amp;L for
+        tours generating over $1B in annual revenue. The platform needed to
+        support roughly a dozen touring teams in the U.S., as well as teams in
+        the UK, Asia, and Latin America, each with its own processes and
+        institutional knowledge. Many veteran users had relied on Excel for
+        20-30 years and were understandably cautious about changing tools. We
+        designed a hybrid architecture that met them where they were, and the
+        MVP launched to settle real shows.
       </p>
 
       <div className="bg-warm-50 rounded-lg p-5 border border-warm-200">
         <p className="text-xs text-accent font-semibold mb-2">My role</p>
         <p className="text-sm text-warm-600 leading-relaxed">
-          Sole product designer. Joined after initial discovery with no domain
-          expertise in touring. Worked across an external agency, in-house
-          product owners, and business stakeholders.
+          Product designer on a blended AEG and vendor team. Partnered closely
+          with another designer across discovery, research, concept development,
+          user testing, prototyping, and production design. Worked alongside
+          product owners, engineers, data analysts, software architects, and
+          touring teams representing AEG subsidiary brands across the U.S., UK,
+          Asia, and Latin America.
         </p>
       </div>
 
@@ -39,8 +45,8 @@ export function AEGContent() {
           <p className="text-xs text-warm-400">Avg. user tenure</p>
         </div>
         <div className="bg-warm-50 border border-warm-200 rounded-lg p-3">
-          <p className="text-xl font-bold text-warm-900">3-way</p>
-          <p className="text-xs text-warm-400">Stakeholder dynamic</p>
+          <p className="text-xl font-bold text-warm-900">4 regions</p>
+          <p className="text-xs text-warm-400">Global operations</p>
         </div>
       </div>
 
@@ -53,14 +59,14 @@ export function AEGContent() {
             on day one, they simply wouldn't open it.
           </p>
           <p>
-            Rather than fighting that, I designed a{' '}
+            Rather than fighting that, we designed a{' '}
             <strong className="text-warm-800">hybrid architecture</strong>: a web
             app for tables, metadata, and search — connected to Excel workbook
             templates with data sync, macros, and database integration. The web app
             handled what Excel was bad at. Excel handled what users refused to give up.
           </p>
           <p>
-            I drove the business logic decision on P&L projections:{' '}
+            I drove the business logic decision on P&amp;L projections:{' '}
             <strong className="text-warm-800">conservative for internal estimates</strong>,{' '}
             <strong className="text-warm-800">generous for external-facing</strong>.
             The MVP launched and was used to settle actual shows — real money, real tours.
@@ -72,11 +78,13 @@ export function AEGContent() {
         <Disclosure label="What made it hard" count={3}>
           <div className="space-y-3 text-sm text-warm-600 leading-relaxed">
             <p>
-              Three groups pulling in different directions. The external agency
-              wanted to protect their margins and scope. In-house product owners
-              had their own roadmap priorities. Veteran users couldn't agree on
-              features or even basic business logic — different people calculated
-              projections differently and had for years.
+              This wasn't a single stakeholder group with one established way
+              of working. The platform had to align touring teams across AEG's
+              subsidiary brands and international regions, alongside an external
+              agency and in-house product owners. Different teams used different
+              processes, terminology, and projection methods, often developed
+              over decades. We had to determine what should be standardized
+              globally and what needed to remain flexible locally.
             </p>
             <p>
               The projection method decision was scoped out of MVP due to Excel
