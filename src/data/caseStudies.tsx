@@ -1,5 +1,6 @@
 import { AnalogNetworkContent } from '../components/studies/AnalogNetwork'
 import { AEGContent } from '../components/studies/AEG'
+import { AlleyStudyContent, alleyThumbnail } from '../components/studies/AlleyStudy'
 import { BumoContent } from '../components/studies/Bumo'
 import { HapticDesignSystemContent } from '../components/studies/HapticDesignSystem'
 import { HMIAlarmSystemContent } from '../components/studies/HMIAlarmSystem'
@@ -23,6 +24,17 @@ export interface CaseStudy {
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: 'alley-stewardship',
+    title: 'Who Is This Alley For?',
+    byline: 'Ongoing spatial research into dumping, stewardship, and shared responsibility',
+    teaser: 'A work-in-progress study of a neighborhood alley in Long Beach — starting with illegal dumping and widening into questions of power, stewardship, community knowledge, and whether design is even the right intervention.',
+    tags: ['Spatial Research', 'Community Design', 'Systems Thinking'],
+    thumbnail: alleyThumbnail,
+    available: true,
+    category: 'work',
+    content: AlleyStudyContent,
+  },
   {
     id: 'aeg',
     title: 'Global Touring Platform',
