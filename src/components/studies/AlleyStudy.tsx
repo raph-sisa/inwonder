@@ -1,8 +1,10 @@
 import forward from '../../data/alleyImages/forward'
 import reverse from '../../data/alleyImages/reverse'
+import map1 from '../../data/alleyImages/map1'
 
 const forwardStrip = `data:image/webp;base64,${forward}`
 const reverseStrip = `data:image/webp;base64,${reverse}`
+const siteMap = `data:image/webp;base64,${map1}`
 
 export const alleyThumbnail = forwardStrip
 
@@ -36,18 +38,16 @@ export function AlleyStudyContent() {
 
       <div>
         <h3 className="text-xs text-accent font-semibold mb-4">Site context</h3>
-        <div className="overflow-hidden rounded-lg border border-warm-200 bg-warm-50">
-          <iframe
-            title="Map of the alley study area in Long Beach"
-            src="https://www.google.com/maps?q=Somerset%20Park%2C%20Long%20Beach%2C%20CA&output=embed"
-            className="w-full h-[420px] border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+        <figure>
+          <img
+            src={siteMap}
+            alt="Annotated aerial map of the alley study area between Somerset Park and a church parking lot in Long Beach"
+            className="w-full rounded-lg border border-warm-200"
           />
-        </div>
-        <p className="text-xs text-warm-400 leading-relaxed mt-2">
-          Somerset Park anchors the west end of the block; the church and its parking lot anchor the east. The alley runs between the two residential rows.
-        </p>
+          <figcaption className="text-xs text-warm-400 leading-relaxed mt-2">
+            Annotated Felt map showing Somerset Park at the west end, the church and parking lot at the east, and the two residential rows bordering the alley.
+          </figcaption>
+        </figure>
       </div>
 
       <div>
