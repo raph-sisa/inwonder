@@ -5,9 +5,11 @@ export function AEGContent() {
     <div className="space-y-10">
       <div className="bg-accent/5 rounded-lg p-5 border-l-4 border-accent">
         <p className="text-sm text-warm-600 leading-relaxed">
-          Designing enterprise tools in a high-stakes domain, aligning touring
-          teams across brands and regions, and shipping a platform that handles
-          $1B+ in touring revenue.
+          Designing across a complex organization where different touring teams had
+          developed their own workflows, language, and institutional knowledge over
+          decades. The challenge was not simply replacing software — it was
+          understanding what people already knew, deciding what could be shared, and
+          designing change they could actually adopt.
         </p>
       </div>
 
@@ -18,9 +20,10 @@ export function AEGContent() {
         support roughly a dozen touring teams in the U.S., as well as teams in
         the UK, Asia, and Latin America, each with its own processes and
         institutional knowledge. Many veteran users had relied on Excel for
-        20-30 years and were understandably cautious about changing tools. We
-        designed a hybrid architecture that met them where they were, and the
-        MVP launched to settle real shows.
+        20-30 years and had good reasons to be cautious about changing tools. We
+        designed a hybrid architecture that preserved familiar workflows while
+        improving the infrastructure around them, and the MVP launched to settle
+        real shows.
       </p>
 
       <div className="bg-warm-50 rounded-lg p-5 border border-warm-200">
@@ -54,16 +57,19 @@ export function AEGContent() {
         <h3 className="text-xs text-accent font-semibold mb-3">The Key Move</h3>
         <div className="space-y-4 text-warm-600 leading-relaxed">
           <p>
-            Previous attempts to modernize had failed because they tried to replace
-            Excel entirely. If the new tool couldn't match users' current capabilities
-            on day one, they simply wouldn't open it.
+            Previous modernization attempts had treated existing workflows as
+            something to replace. Our research suggested the opposite: the Excel
+            workbooks contained years of embedded practice, shortcuts, and domain
+            knowledge. If a new tool could not match what users already depended on,
+            they had little reason to adopt it.
           </p>
           <p>
-            Rather than fighting that, we designed a{' '}
+            Rather than asking users to abandon that expertise, we designed a{' '}
             <strong className="text-warm-800">hybrid architecture</strong>: a web
             app for tables, metadata, and search — connected to Excel workbook
             templates with data sync, macros, and database integration. The web app
-            handled what Excel was bad at. Excel handled what users refused to give up.
+            handled what Excel was bad at. Excel preserved workflows users still
+            needed.
           </p>
           <p>
             I drove the business logic decision on P&amp;L projections:{' '}
@@ -120,10 +126,11 @@ export function AEGContent() {
       <div className="border-l-2 border-accent pl-5 py-1">
         <p className="text-xs text-accent font-semibold mb-2">Earned secret</p>
         <p className="text-warm-800 leading-relaxed">
-          When your users have 30 years of domain expertise and hate change, you
-          don't replace their tools — you upgrade the infrastructure underneath
-          while keeping the interface familiar. A beautiful web app they'd
-          never open is worse than an Excel workbook they actually use.
+          People with decades of experience are not obstacles to change; they are
+          often carrying knowledge the new system needs to preserve. Good
+          modernization starts by understanding what their existing tools make
+          possible, then changing the infrastructure without casually discarding
+          the practices that work.
         </p>
       </div>
     </div>
