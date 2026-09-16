@@ -15,12 +15,7 @@ export function Nav() {
         </Link>
 
         <div className="flex items-center gap-3 sm:gap-5">
-          <Link
-            to="/field-notes"
-            className="text-sm font-bold text-warm-600 hover:text-primary transition-colors py-2"
-          >
-            Field Notes
-          </Link>
+          {/* Field Notes intentionally hidden until the spatial studies are ready to publish. */}
           <a
             href="/#contact"
             className="bg-primary text-white rounded-full px-5 sm:px-6 py-2.5 text-sm font-bold hover:opacity-90 transition-[transform,opacity] duration-160 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.97] min-h-[44px] inline-flex items-center"
