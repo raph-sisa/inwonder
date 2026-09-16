@@ -6,7 +6,6 @@ import { Nav } from './components/Nav'
 import { PageTransition } from './components/PageTransition'
 import { Home } from './pages/Home'
 import { CaseStudyPage } from './pages/CaseStudyPage'
-import { FieldNotes } from './pages/FieldNotes'
 
 export default function App() {
   const location = useLocation()
@@ -36,7 +35,7 @@ export default function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />
           <Route path="/work/:id" element={<PageTransition><CaseStudyPage /></PageTransition>} />
-          <Route path="/field-notes" element={<PageTransition><FieldNotes /></PageTransition>} />
+          {/* Field Notes intentionally hidden until the spatial studies are ready to publish. */}
         </Routes>
       </AnimatePresence>
     </>
